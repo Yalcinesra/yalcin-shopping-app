@@ -4,7 +4,7 @@
 
 ## Expected Outcome
 
-![Project Snapshot](./clarus-shopping.gif)
+![Project Snapshot](https://github.com/Yalcinesra/yalcin-shopping-app/blob/main/shopping.gif)
 ## Demo
 
 [App Live Version](https://yalcin-shopping-app.netlify.app/)
