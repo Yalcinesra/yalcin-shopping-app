@@ -14,8 +14,12 @@ const Home = () => {
   const [selected, setSelected] = useState("");
 
   useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
+    if (selected === '') {
+      dispatch(getData()); 
+    } else {
+      dispatch(getData(selected)); 
+    }
+  }, [dispatch, selected]);
 
  
 

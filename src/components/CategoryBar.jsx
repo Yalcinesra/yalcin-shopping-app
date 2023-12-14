@@ -27,7 +27,7 @@ export default function CategoriBar({ selected,setSelected }) {
   const handleClick = e => {
     const value = e.target.value;
     setSelected(value);
-    dispatch(getData(e.target.value && `/category/${e.target.value}`));
+    dispatch(getData(value));
   };
   return (
     <FormControl sx={{ width: "100vw", m: 1 }}>

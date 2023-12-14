@@ -2,14 +2,21 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-export const getData = createAsyncThunk("productSlice/getData", async () => {
-  const response = await axios(
-    "https://fakestoreapi.com/products"
-    
-  );
-  console.log(response.data);
-  return response.data;
-});
+export const getData = createAsyncThunk("productSlice/getData",  
+  async (category = "") => {
+    let url = "https://fakestoreapi.com/products";
+    if (category) {
+      url += `/category/${category}`;
+    }
+
+    try {
+      const response = await axios.get(url);      
+      return response.data;
+    } catch (error) {
+      throw Error(error);
+    }
+  }
+);
 
 
 
